@@ -1,0 +1,20 @@
+USE `cantina`;
+
+DELIMITER //
+CREATE PROCEDURE venda_por_credito (id_venda INT) 
+BEGIN
+
+DECLARE T_total DECIMAL (7,2);
+DECLARE T_credito DECIMAL (7,2);
+DECLARE T_credito_final DECIMAL (7,2);
+
+SELECT v.total, a.credito INTO T_total, T_credito FROM venda v JOIN aluno a ON v.aluno_id = a.id
+WHERE v.id = id_venda;
+
+SET T_credito_final := T_credito - T_total;
+UPDATE aluno SET credito = T_credito_final;
+IF T_credito_final < 0 THEN
+	UPDATE aluno SET inadimplente = 1;
+END IF;
+END//
+DELIMITER ;
