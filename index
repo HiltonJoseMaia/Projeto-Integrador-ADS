@@ -1,0 +1,4 @@
+USE `cantina`;
+
+ALTER TABLE `cantina`.`produto` ADD INDEX `nome` (`nome` ASC);
+ALTER TABLE `cantina`.`venda` ADD INDEX `horario` (`horario` ASC);
