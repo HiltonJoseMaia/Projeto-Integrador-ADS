@@ -1,0 +1,17 @@
+USE `cantina`;
+
+CREATE USER 'aluno_exemplo'@'localhost' IDENTIFIED BY 'senha123';
+CREATE USER 'funcionario_exemplo'@'localhost' IDENTIFIED BY 'senha123';
+CREATE USER 'adm_exemplo'@'localhost' IDENTIFIED BY 'senha123';
+
+CREATE ROLE aluno, funcionario, adm;
+GRANT ALL ON cantina.* TO 'adm';
+GRANT SELECT, INSERT, DELETE, UPDATE ON cantina.produto TO 'funcionario';
+GRANT SELECT ON cantina.aluno TO 'funcionario', 'aluno';
+GRANT SELECT ON cantina.produto TO 'funcionario';
+GRANT SELECT ON cantina.venda TO 'funcionario';
+GRANT SELECT ON cantina.venda_produto TO 'funcionario';
+
+GRANT 'adm' TO 'adm_exemplo'@'localhost';
+GRANT 'funcionario' TO 'funcionario_exemplo'@'localhost';
+GRANT 'aluno' TO 'aluno_exemplo'@'localhost'
