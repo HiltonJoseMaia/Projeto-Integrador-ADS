@@ -1,0 +1,14 @@
+PLANO DE BACKUP E RESTAURAÇÃO
+
+Intervalos de backup: 24 horas
+Sustentação de backup: 7 dias
+
+PARA FAZER BACKUP:
+- Dentro da workbench do banco, já conectado e dentro da interface de esquemas, clique em ‘Server’ e depois em ‘Data Export’;
+- Depois, seguindo o salvamento na subpasta ‘Dump’, selecione o esquema do banco de dados;
+- Clique em ‘Start Export’ e verifique a integridade dos arquivos na pasta assim que o processo terminar;
+
+PARA RESTAURAR
+- Dentro da workbench do banco, já conectado e dentro da interface de esquemas, clique em ‘Server’ e depois em ‘Data Import’;
+- Selecione o caminho pelos arquivos no armazenamento que leve até onde estão os dumps de backup;
+- Selecione o backup desejado para restaurar e clique em ‘Start Import’. Após isso, verifique a integridade do sistema assim que o processo terminar;
