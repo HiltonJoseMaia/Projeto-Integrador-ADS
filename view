@@ -1,0 +1,5 @@
+USE `cantina`;
+
+CREATE VIEW view_relatorio_croissant AS SELECT v.horario, v.total, p.nome AS produto_nome, vp.quantidade, p.preço, a.nome AS aluno_nome, a.matricula
+FROM venda v JOIN venda_produto vp ON v.id = vp.venda_id JOIN produto p ON p.id = vp.produto_id JOIN aluno a ON a.id = v.aluno_id
+WHERE p.nome = 'Croissant' ORDER BY v.horario DESC;
