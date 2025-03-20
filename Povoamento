@@ -1,0 +1,59 @@
+USE `cantina`;
+
+INSERT INTO usuario(id,login,senha) VALUES 
+(1,'Claudio501','+7`0es(JT5D4'),
+(2,'Joao303','[an6pY6x1h\{'),
+(3,'Paola078','2WY35@804p:^'),
+(4,'Mateus321','brcmwLE8}3R3'),
+(5,'Laura908','ICi8M`6I8dPN'),
+(6,'Gonzaga098','4#g1a7Pk2U[^'),
+(7,'Bruce121','cB@35I96mxv0'),
+(8,'Tomas741','jXIa%592;tRJ'),
+(9,'Wesley110','-0a,G4T7eQr'),
+(10,'Ronaldo610','wq4B6j?/36c~'),
+(11,'Yasmin010','|-d4G349K7U0'),
+(12,'Cleber890','!t2GU9o3aYqx'),
+(13,'Horacio870','!t2GU9o3aYqx'),
+(14,'Belo410','i>R*I%^593>8'),
+(15,'Karen780','`6v<_yD£v25k'),
+(16,'Soares001','8b%m75@pT~6T'),
+(17,'Zacaria910','uxL38:5bE&]'),
+(18,'Lucas010','1xujYr@7X99p'),
+(19,'Sonia850','P_9p?xz21>4'),
+(20,'Fabricio000',',jRr$Dr860rL');
+
+INSERT INTO aluno(nome,matricula,inadimplente,id) VALUES
+('Claudio','70076076083',0,1),
+('João','08547431039',0,2),
+('Paola','63737619085',0,3),
+('Mateus','59046321002',0,4),
+('Laura','50889399069',0,5),
+('Gonzaga','60025473042',0,6),
+('Bruce','00546907067',0,7),
+('Tomas','44526380075',0,8),
+('Wesley','64345427045',0,9),
+('Ronaldo','63719318060',0,10);
+
+INSERT INTO funcionario(nome,telefone,cpf,id) VALUES
+('Yasmin','+557144486101','418.154.010-36',11),
+('Cleber','+551229707059','136.210.340-30',12),
+('Horacio','+558655365313','445.372.440-38',13),
+('Belo','+556638900827','105.624.640-50',14),
+('Karen','+558437750287','948.343.180-87',15),
+('Soares','+556471953936','906.313.700-13',16),
+('Zacaria','+556471953936','162.752.280-83',17),
+('Luan','+551857497489','460.145.000-49',18),
+('Sonia','+554770965859','794.995.730-11',19),
+('Paulo','+557342508680','424.008.630-24',20);
+
+INSERT INTO produto(nome,preço,estoque) VALUES
+('Croissant', 8.00,50),
+('Joelho',9.00,50),
+('Coxinha',8.00,50),
+('Hamburguer',10.00,50),
+('Cachorro quente',9.00,50),
+('Quibe',7.00,50),
+('Esfiha',8.00,50),
+('Pizza',11.00,50),
+('Empada',9.00,50),
+('Pastel',10.00,50);
